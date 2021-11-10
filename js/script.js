@@ -52,14 +52,31 @@ if (sentinella) {
     //  1) Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. 
     //  2) Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
-// 1) Genero numero random dell'utente
+// 1.1) Genera numero utente
+const userNumero = Math.floor(Math.random() * 6) + 1;
+console.log("Il tuo numero è: " + userNumero);
 
-// // dichiaro e assegno variabile
-// const numeroRandom = document.getElementById("genera");
-// //numeroRandom.innerHTML = Math.floor(Math.random() * 6) + 1; // 
+// 1.2) Genero numero del computer
+const computerNumero = Math.floor(Math.random() * 6) + 1;
+console.log("Il numero del tuo avversario è: " + computerNumero);
 
-// numeroRandom.addEventListener("click", function() {
-//     return Math.floor(Math.random * 6) + 1;
-//    });
+// output in HTML
+document.getElementById("genera").innerHTML = "Il tuo numero è: " + userNumero + " " + "Il numero del tuo avversario è: " + computerNumero;
 
-//prova NON funziona
+// 2) Stabilire il vincitore
+
+//dichiaro variabile
+let result;
+
+if (userNumero < computerNumero) {
+    console.log("Hai perso!");
+    result = "Hai perso!";
+} else if (userNumero > computerNumero) {
+    console.log("Hai vinto!");
+    result = "Hai vinto!";
+} else {
+    console.log("Pareggio!");
+    result = "Pareggio!";
+};
+
+document.getElementById("risultato").innerHTML = result;
