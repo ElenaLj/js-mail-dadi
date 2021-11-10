@@ -46,3 +46,20 @@ if (sentinella) {
 } else {
     console.log("L'email inserita non è valida")
 }
+
+
+// esercizio 2: GIOCO DEI DADI
+    //  1) Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. 
+    //  2) Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
+// 1) Genero numero random dell'utente
+
+// // dichiaro e assegno variabile
+// const numeroRandom = document.getElementById("genera");
+// //numeroRandom.innerHTML = Math.floor(Math.random() * 6) + 1; // 
+
+// numeroRandom.addEventListener("click", function() {
+//     return Math.floor(Math.random * 6) + 1;
+//    });
+
+//prova NON funziona
